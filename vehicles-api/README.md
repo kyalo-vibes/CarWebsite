@@ -38,21 +38,21 @@ Swagger UI: http://localhost:8080/swagger-ui.html
 `POST` `/cars`
 ```json
 {
-   "condition":"USED",
+   "condition":"NEW",
    "details":{
-      "body":"sedan",
-      "model":"Impala",
+      "body":"pick-up",
+      "model":"Ranger",
       "manufacturer":{
-         "code":101,
-         "name":"Chevrolet"
+         "code":102,
+         "name":"Ford"
       },
       "numberOfDoors":4,
-      "fuelType":"Gasoline",
-      "engine":"3.6L V6",
+      "fuelType":"Petroleum",
+      "engine":"3.0L V5",
       "mileage":32280,
-      "modelYear":2018,
-      "productionYear":2018,
-      "externalColor":"white"
+      "modelYear":2016,
+      "productionYear":2020,
+      "externalColor":"orange"
    },
    "location":{
       "lat":40.73061,
