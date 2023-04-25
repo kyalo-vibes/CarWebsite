@@ -14,7 +14,7 @@ While the primary Vehicles API performs CRUD operations related to vehicle detai
 
 ## Demo
 
-https://user-images.githubusercontent.com/74621252/187639048-220eb19e-8925-4b0b-b370-afdbf8472329.mov
+https://user-images.githubusercontent.com/95200602/234293944-99b685db-8c0d-49dc-85e8-99d2284ba951.mp4
 
 ## Structure
 
