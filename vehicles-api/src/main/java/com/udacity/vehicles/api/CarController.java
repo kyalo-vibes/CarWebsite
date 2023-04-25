@@ -5,7 +5,7 @@ import com.udacity.vehicles.domain.car.CarModel;
 import com.udacity.vehicles.service.CarService;
 import java.net.URISyntaxException;
 import java.util.List;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
@@ -36,7 +36,6 @@ class CarController {
 
     /**
      * Creates a list to store any vehicles.
-     *
      * @return list of vehicles
      */
     @GetMapping
@@ -49,7 +48,6 @@ class CarController {
 
     /**
      * Gets information of a specific car by ID.
-     *
      * @param id the id number of the given vehicle
      * @return all information for the requested vehicle
      */
@@ -64,8 +62,7 @@ class CarController {
         Car car = carService.findById(id);
         return new ResponseEntity<>(
                 assembler.toModel(car),
-                HttpStatus.OK);
-    }
+                HttpStatus.OK);}
 
     /**
      * Posts information to create a new vehicle in the system.
@@ -76,9 +73,9 @@ class CarController {
     @PostMapping
     ResponseEntity<?> post(@Valid @RequestBody Car car) throws URISyntaxException {
         /**
-         * TODO: Use the `save` method from the Car Service to save the input car.
-         * TODO: Use the `assembler` on that saved car and return as part of the response.
-         *   Update the first line as part of the above implementing.
+         * DONE: Use the `save` method from the Car Service to save the input car.
+         * DONE: Use the `assembler` on that saved car and return as part of the response.
+         * DONE: Update the first line as part of the above implementing.
          */
         return new ResponseEntity<>(
                 assembler.toModel(carService.save(car)),
@@ -94,10 +91,10 @@ class CarController {
     @PutMapping("/{id}")
     ResponseEntity<?> put(@PathVariable Long id, @Valid @RequestBody Car car) {
         /**
-         * TODO: Set the id of the input car object to the `id` input.
-         * TODO: Save the car using the `save` method from the Car service
-         * TODO: Use the `assembler` on that updated car and return as part of the response.
-         *   Update the first line as part of the above implementing.
+         * DONE: Set the id of the input car object to the `id` input.
+         * DONE: Save the car using the `save` method from the Car service
+         * DONE: Use the `assembler` on that updated car and return as part of the response.
+         * DONE: Update the first line as part of the above implementing.
          */
         car.setId(id);
         return new ResponseEntity<>(
@@ -113,7 +110,7 @@ class CarController {
     @DeleteMapping("/{id}")
     ResponseEntity<?> delete(@PathVariable Long id) {
         /**
-         * TODO: Use the Car Service to delete the requested vehicle.
+         * DONE: Use the Car Service to delete the requested vehicle.
          */
         carService.delete(id);
         return ResponseEntity.noContent().build();
