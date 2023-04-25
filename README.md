@@ -10,7 +10,6 @@ While the primary Vehicles API performs CRUD operations related to vehicle detai
 - [Structure](#structure)
 - [Technologies](#technologies)
 - [Usage](#usage)
-- [License](#license)
 
 ## Demo
 
